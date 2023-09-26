@@ -1,3 +1,5 @@
+#  all database actions that are done to test the integrity of the database
+#  Not really compulsory
 from blog import app
 from blog import db
 from blog.models import User
