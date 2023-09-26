@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Login - Blogmate
+{% endblock %}
+
+{% block content %}
+<div class=”shadow-lg p-3 mb-5 bg-white rounded”>
+    <div class = "container my-login-form d-flex align-items-center justify-content-center ">
+        <div class="card col-md-4">
+            <div class="card-body">
+                
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <h3 class="card-title">Login</h3>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="" class="form-label">{{ form.username.label() }}</label>
+                        {{ form.username(class = "form-control", placeholder = "Username") }}
+                        <small id="helpId" class="form-text text-muted">Enter your username here</small>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="" class="form-label">{{ form.password.label() }}</label>
+                        {{ form.password(class = "form-control",placeholder = "Password") }}
+
+                        <small id="helpId" class="form-text text-muted">Confirm your Password</small>
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.submit(class = "btn btn-primary") }}
+                    </div>
+                </form>
+                <hr>
+
+                <small class="text-muted">Dont have an account?, Signup <a href = "{{ url_for('signup' ) }}">Here</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

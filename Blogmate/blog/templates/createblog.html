@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create Blog - {{current_user.name}}
+{% endblock %}
+
+{% block content %}
+    <div class="card text-start">
+      <div class="card-body">
+        <h1 class = "display-3 text-center">Create Blog</h1>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">{{ form.topic.label() }}</h4>
+                <hr>
+                <div class="mb-3">
+                    {{ form.topic(class = "form-control",placeholder = "Blog title" ,style = "font-size : large;") }}
+                  <small id="helpId" class="form-text text-muted">Insert your blog topic here</small>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">{{ form.content.label() }}</h4>
+                <hr>
+                <div class="mb-3">
+                    {{ form.content(class = "form-control",placeholder = "Blog content" ,style = "height : 550px") }}
+                  <small id="helpId" class="form-text text-muted">Insert your blog content here</small>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <hr>
+                <div class="mb-3">
+                    {{ form.submit(class = "btn btn-block btn-primary") }}
+                  <small id="helpId" class="form-text text-muted">Submit Blog</small>
+                </div>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+{% endblock %}

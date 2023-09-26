@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}
+    Blogmate - Signup
+{% endblock %}
+
+{% block content %}
+<div class=”shadow-lg p-3 mb-5 bg-white rounded”>
+    <div class = "container my-login-form d-flex align-items-center justify-content-center ">
+        <div class="card  col-md-5">
+            <div class="card-body">
+                
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <h4 class="card-title">Signup</h4>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="" class="form-label">{{ form.username.label() }}</label>
+                        {{ form.username(class = "form-control", placeholder = "Username") }}
+                        <small id="helpId" class="form-text text-muted">Insert your username here</small>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                    <label for="" class="form-label">{{ form.email_address.label() }}</label>
+                    {{ form.email_address(class = "form-control",placeholder = "name@mail.com") }}
+                    <small id="helpId" class="form-text text-muted">Insert your email address here</small>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="" class="form-label">{{ form.password1.label() }}</label>
+                        {{ form.password1(class = "form-control",placeholder = "Password") }}
+                        <small id="helpId" class="form-text text-muted">Create your password</small>
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="" class="form-label">{{ form.password2.label() }}</label>
+                        {{ form.password2(class = "form-control", placeholder = "Password") }}
+                        <small id="helpId" class="form-text text-muted">Confirm your Password</small>
+                    </div>
+                    
+                    <div class="mb-3">
+                        {{ form.submit(class = "btn btn-primary") }}
+                    </div>
+                </form>
+                <hr>
+
+                <small class="text-muted">Have an account?, Login <a href = "{{ url_for('login' ) }}">Here</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
