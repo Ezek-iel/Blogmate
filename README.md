@@ -1,5 +1,5 @@
-# Blogmate
- A simple  Blogging app with Flask, Soon to be dissolved
+# Blogmate *Soon to be dissolved*
+ A simple  Blogging app with Flask,
 
 ## Overview
   Blogmate is a blogging app with flask with password encryption, user authentication and supposedly nice styling 😁 ***(..joking about that)***
