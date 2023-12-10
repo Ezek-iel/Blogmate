@@ -1,4 +1,4 @@
-# Blogmate *Soon to be dissolved*
+# Blogmate *(Soon to be dissolved)*
  A simple  Blogging app with Flask,
 
 ## Overview
